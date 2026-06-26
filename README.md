@@ -1,4 +1,13 @@
+<p align="center">
+  <img src="assets/blade-arcade-hero.svg" alt="Blade Arcade banner" width="100%">
+</p>
+
 # Blade Arcade
+
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/UI-Tkinter-22D3EE?style=for-the-badge)
+![PyBoy](https://img.shields.io/badge/Optional-PyBoy-F472B6?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-FACC15?style=for-the-badge)
 
 Blade Arcade is a Grade 11 ICS3U computer science project built with Python and
 Tkinter. It combines a local login screen, a shared coin balance, two
@@ -9,16 +18,21 @@ The goal of the project was to practice Python fundamentals, basic GUI design,
 JSON file storage, modular code organization, and connecting several smaller
 programs into one arcade-style app.
 
-## Features
+## At a Glance
 
-- Tkinter login and home screens
-- Local user accounts stored in JSON
-- Coin balance system shared across games
-- Two free terminal games:
-  - HighLow Gamble
-  - Duck, Fish, Mosquito
-- Optional PyBoy emulator integration
-- Per-user activity logs and save files
+| Area | What it does |
+| --- | --- |
+| Login | Creates local accounts and signs users in through a Tkinter screen |
+| Coins | Stores and updates each user's coin balance in JSON |
+| Free games | Runs HighLow Gamble and Duck, Fish, Mosquito in the terminal |
+| Emulator | Optionally launches Game Boy ROMs through PyBoy |
+| Saves | Writes per-user game saves and activity logs locally |
+
+## System Map
+
+<p align="center">
+  <img src="assets/blade-arcade-system-map.svg" alt="Blade Arcade system map" width="100%">
+</p>
 
 ## Project Structure
 
@@ -56,6 +70,9 @@ python Jetha_Rehan_Arcade.py
 
 On the login screen, create a new local account with the sign-up button. The
 account data is stored locally in `Database/users.json`.
+
+Tkinter can render native controls differently across Windows and macOS, so the
+exact button styling may vary by operating system.
 
 ## ROMs
 

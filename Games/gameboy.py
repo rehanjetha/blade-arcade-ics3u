@@ -9,12 +9,17 @@
 ##############################################
 
 import os
-from pyboy import PyBoy, logger
+from pyboy import PyBoy
 import tkinter
 from tkinter import messagebox
 import time
 
 from Control.coins import getCoins, updateCoins
+
+try:
+    from pyboy import logger
+except ImportError:
+    logger = None
 
 #########################################################
 # FCN NAME: gameboyEmulator
@@ -75,7 +80,8 @@ from Control.coins import getCoins, updateCoins
 
 def gameboyEmulator(usr, buttons, game, display):
     
-    logger.log_level("DISABLE")  # disable logging
+    if logger:
+        logger.log_level("DISABLE")  # disable logging
 
     messagebox.showinfo("Time Limit", "You will have 10 minutes to play. Controls are found in the shell.")  # show time limit message
 
