@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/blade-arcade-hero.svg" alt="Blade Arcade banner" width="100%">
-</p>
-
 # Blade Arcade
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -27,12 +23,6 @@ programs into one arcade-style app.
 | Free games | Runs HighLow Gamble and Duck, Fish, Mosquito in the terminal |
 | Emulator | Optionally launches Game Boy ROMs through PyBoy |
 | Saves | Writes per-user game saves and activity logs locally |
-
-## System Map
-
-<p align="center">
-  <img src="assets/blade-arcade-system-map.svg" alt="Blade Arcade system map" width="100%">
-</p>
 
 ## Project Structure
 
