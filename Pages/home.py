@@ -18,6 +18,13 @@ from Control.buttons import disableButtons, gameboyButton
 from Games.highlow import highlowGame
 from Games.dfm import duckFishMosquitoGame
 
+try:
+    RESAMPLE_FILTER = Image.Resampling.LANCZOS
+except AttributeError:
+    RESAMPLE_FILTER = getattr(Image, "LANCZOS", None)
+    if RESAMPLE_FILTER is None:
+        RESAMPLE_FILTER = Image.ANTIALIAS
+
 #########################################################
 # FCN NAME: gamePrep
 # DESCRIPTION: Generic game message: "move to shell!"
@@ -148,7 +155,7 @@ def homePage(usr, coins):
     welcome_label.grid(row=0, column=4, sticky="n", pady=(40, 0))  # place free games label
 
     blade_image = Image.open("Resources/blade_arcade.png")  # open blade arcade image
-    blade_image = blade_image.resize((200, 200), Image.ANTIALIAS)  # enlarge image slightly
+    blade_image = blade_image.resize((200, 200), RESAMPLE_FILTER)  # enlarge image slightly
     blade_image = ImageTk.PhotoImage(blade_image)  # make useable for tkinter
     image_label = tkinter.Label(image=blade_image, bg="#343541")  # place image on label
     image_label.place(relx=0.5, rely=0.54, anchor="center")  # move image up to 0.55 on the rely

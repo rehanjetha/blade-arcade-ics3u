@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tkinter](https://img.shields.io/badge/UI-Tkinter-22D3EE?style=for-the-badge)
 ![PyBoy](https://img.shields.io/badge/Optional-PyBoy-F472B6?style=for-the-badge)
+![Tests](https://github.com/rehanjetha/blade-arcade-ics3u/actions/workflows/tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-FACC15?style=for-the-badge)
 
 Blade Arcade is a Grade 11 ICS3U computer science project built with Python and
@@ -13,6 +14,12 @@ PyBoy.
 The goal of the project was to practice Python fundamentals, basic GUI design,
 JSON file storage, modular code organization, and connecting several smaller
 programs into one arcade-style app.
+
+## Screenshots
+
+| Login | Arcade Home |
+| --- | --- |
+| <img src="docs/assets/blade-arcade-login.png" alt="Blade Arcade login screen preview" width="100%"> | <img src="docs/assets/blade-arcade-home.png" alt="Blade Arcade home screen preview" width="100%"> |
 
 ## At a Glance
 
@@ -63,6 +70,18 @@ account data is stored locally in `Database/users.json`.
 
 Tkinter can render native controls differently across Windows and macOS, so the
 exact button styling may vary by operating system.
+
+## Testing
+
+Run the automated tests with:
+
+```bash
+python -m unittest discover -s tests
+```
+
+The tests cover coin persistence, paid-game coin spending, Duck/Fish/Mosquito
+outcomes, and HighLow win/loss outcomes. They do not open Tkinter or PyBoy
+windows.
 
 ## ROMs
 

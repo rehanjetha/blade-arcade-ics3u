@@ -98,7 +98,7 @@ def updateCoins(usr, coins, display):
         if (user['username'] == usr):
             previous_coins = user['coins']  # calculate previous coins
             user['coins'] = coins  # update current user coins
-            display.config(text=f"{coins: ,}")  # update coins value on label
+            display.config(text=f"{coins:,}")  # update coins value on label
 
             coin_diff = coins - previous_coins  # find gain/loss from coins
 
@@ -148,4 +148,4 @@ def coinsPriceMet(usr, display):
         coins = 1000  # subtract 8000 coins
         updateCoins(usr, coins, display)  # update coins
     else:
-        return False  # return False for coins met 
+        return False  # return False for coins met
